@@ -34,3 +34,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - shell: bash
+      env:
+        PASSWORD: ${{ secrets.SuperSecret }}
+      run: |
+        echo "$PASSWORD"
+
